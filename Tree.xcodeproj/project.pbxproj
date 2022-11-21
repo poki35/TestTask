@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A67360A2292ACF6E00B7B3A7 /* TreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360A1292ACF6E00B7B3A7 /* TreeApp.swift */; };
-		A67360A4292ACF6E00B7B3A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360A3292ACF6E00B7B3A7 /* ContentView.swift */; };
 		A67360A6292ACF7000B7B3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67360A5292ACF7000B7B3A7 /* Assets.xcassets */; };
 		A67360A9292ACF7000B7B3A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67360A8292ACF7000B7B3A7 /* Preview Assets.xcassets */; };
+		A67360B2292BD8B800B7B3A7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360B1292BD8B800B7B3A7 /* RootView.swift */; };
+		A67360B4292BD8CD00B7B3A7 /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360B3292BD8CD00B7B3A7 /* ChildView.swift */; };
+		A67360B6292BD8E300B7B3A7 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360B5292BD8E300B7B3A7 /* Node.swift */; };
+		A67360B8292BD8F600B7B3A7 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67360B7292BD8F600B7B3A7 /* Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A673609E292ACF6E00B7B3A7 /* Tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67360A1292ACF6E00B7B3A7 /* TreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeApp.swift; sourceTree = "<group>"; };
-		A67360A3292ACF6E00B7B3A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A67360A5292ACF7000B7B3A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A67360A8292ACF7000B7B3A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A67360B1292BD8B800B7B3A7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A67360B3292BD8CD00B7B3A7 /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
+		A67360B5292BD8E300B7B3A7 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		A67360B7292BD8F600B7B3A7 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		A67360A0292ACF6E00B7B3A7 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
+				A67360B0292BD88C00B7B3A7 /* Tree Struct */,
+				A67360AF292BD87C00B7B3A7 /* View */,
 				A67360A1292ACF6E00B7B3A7 /* TreeApp.swift */,
-				A67360A3292ACF6E00B7B3A7 /* ContentView.swift */,
 				A67360A5292ACF7000B7B3A7 /* Assets.xcassets */,
 				A67360A7292ACF7000B7B3A7 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				A67360A8292ACF7000B7B3A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A67360AF292BD87C00B7B3A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A67360B1292BD8B800B7B3A7 /* RootView.swift */,
+				A67360B3292BD8CD00B7B3A7 /* ChildView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A67360B0292BD88C00B7B3A7 /* Tree Struct */ = {
+			isa = PBXGroup;
+			children = (
+				A67360B5292BD8E300B7B3A7 /* Node.swift */,
+				A67360B7292BD8F600B7B3A7 /* Tree.swift */,
+			);
+			path = "Tree Struct";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67360A4292ACF6E00B7B3A7 /* ContentView.swift in Sources */,
+				A67360B8292BD8F600B7B3A7 /* Tree.swift in Sources */,
+				A67360B2292BD8B800B7B3A7 /* RootView.swift in Sources */,
 				A67360A2292ACF6E00B7B3A7 /* TreeApp.swift in Sources */,
+				A67360B4292BD8CD00B7B3A7 /* ChildView.swift in Sources */,
+				A67360B6292BD8E300B7B3A7 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
