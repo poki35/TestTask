@@ -30,22 +30,30 @@ struct ChildView: View {
             Spacer()
             
             HStack {
-                Button("Добавить") {
+                Button("Add") {
                     presentAlert = true
                 }
-                .alert("Добавить ребенка", isPresented: $presentAlert, actions: {
+                .frame(width: 60, height: 20)
+                .padding([.trailing, .leading], 55)
+                .padding([.top, .bottom], 20)
+                .foregroundColor(.white)
+                .background(Color.indigo)
+                .cornerRadius(25)
+                .font(.system(size: 16, weight: .black, design: .rounded))
+                
+                .alert("Add child", isPresented: $presentAlert, actions: {
                     TextField(
-                        "Имя",
+                        "Name",
                         text: $currentText
                     )
                     Button(
-                        "Добавить",
+                        "Add",
                         action: {
                             viewModel.addChild(name: currentText)
                             currentText = ""
                         }
                     )
-                    Button("Отмена", role: .cancel, action: {})
+                    Button("Cancel", role: .cancel, action: {})
                 })
                 
                 Spacer()
@@ -54,9 +62,16 @@ struct ChildView: View {
                     viewModel.delete()
                     mode.wrappedValue.dismiss()
                 } label: {
-                    Text("Удалить")
+                    Text("Delete")
                 }
+                .frame(width: 60, height: 20)
+                .padding([.trailing, .leading], 55)
+                .padding([.top, .bottom], 20)
                 .foregroundColor(.red)
+                .background(Color.indigo)
+                .cornerRadius(25)
+                .font(.system(size: 18, weight: .black, design: .rounded))
+                
             }
         }
         .padding()

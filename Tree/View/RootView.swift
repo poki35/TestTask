@@ -82,27 +82,39 @@ struct RootView: View {
                 
                 Spacer()
                 
-                Button("Добавить") {
+                Button("Add") {
                     presentAlert = true
                 }
-                .alert("Добавить ребенка", isPresented: $presentAlert, actions: {
+                .frame(width: 60, height: 20)
+                .padding([.trailing, .leading], 55)
+                .padding([.top, .bottom], 20)
+                .foregroundColor(.white)
+                .background(Color.indigo)
+                .cornerRadius(25)
+                .font(.system(size: 16, weight: .black, design: .rounded))
+                
+                .alert("Add child", isPresented: $presentAlert, actions: {
                     TextField(
-                        "Имя",
+                        "Name",
                         text: $currentText
                     )
                     Button(
-                        "Добавить",
+                        "Add",
                         action: {
                             viewModel.addChild(name: currentText)
                             currentText = ""
                         }
                     )
-                    Button("Отмена", role: .cancel, action: {})
+                    
+                    
+                    Button("Cancel", role: .cancel, action: {})
+                    
                 })
             }
             .padding()
-            .navigationTitle(viewModel.node.name)
+            .navigationTitle("Family Tree")
             .onAppear {
+                
             }
         }
     }
@@ -133,9 +145,17 @@ struct ChildsList: View {
                 )
             } label: {
                 Text(node.name)
+                    .frame(width: 150, height: 40)
+                    .padding([.trailing, .leading], 55)
+                    .padding([.top, .bottom], 20)
+                    .foregroundColor(.white)
+                    .background(Color.mint)
+                    .cornerRadius(25)
+                    .font(.system(size: 18, weight: .black, design: .rounded))
             }
             Spacer()
-                .frame(height: 20)
+                .frame(height: 50)
+            
         }
     }
 }
